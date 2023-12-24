@@ -1,9 +1,25 @@
-<p>main-page works!</p>
-<div>
-    <div class="justify-center items-center flex flex-col gap-2">
-        <button mat-raised-button color="primary" (click)="navigateToYes()" >Yes Ofc!</button>
-        <button mat-raised-button color="accent" (click)="navigateToNo()">Nah</button>
+<div class="flex justify-center items-center h-screen bg-green-400">
+  <div class="flex justify-center items-center flex-col gap-2">
+    <div class="relative w-[200px] h-auto animate-bounce !mb-[-10px] !pb-[-10px]">
+      <img src="/assets/cloud.png" alt="Message Cloud" class="w-full h-auto" />
+      <div
+        class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+        <span
+          class="text-black font-bold text-lg md:text-xl text-center w-[170px] accent-text pb-8">
+          Would you like to spend time on a card game next week?
+        </span>
+      </div>
     </div>
+    <div class="avatar-container pb-2">
+      <img src="/assets/flynn.png" alt="Your Avatar" class="avatar-image blur-effect" />
+    </div>
+    <div class="flex flex-col md:flex-row gap-2">
+      <button mat-raised-button color="primary" (click)="navigateToYes()">
+        Yes, I’d love to!
+      </button>
+      <button mat-raised-button color="accent" (click)="navigateToNo()">
+        Not tonight
+      </button>
+    </div>
+  </div>
 </div>
-
-</section>
