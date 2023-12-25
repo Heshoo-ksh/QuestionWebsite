@@ -23,7 +23,7 @@ export class MainPageComponent {
     const noButton = document.getElementById('noButton');
     if (!noButton) return;
 
-    if (this.dodgeCount < 5) {
+    if (this.dodgeCount < 7) {
       const safeZone = 15;
 
       let randomX = safeZone + Math.random() * (100 - safeZone * 2);
