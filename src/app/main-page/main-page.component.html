@@ -24,13 +24,13 @@
     />
 
     <div class="flex flex-col md:flex-row gap-2 w-[250px] md:w-auto">
-      <button mat-raised-button color="primary" (click)="navigateToYes()" >
+      <button mat-raised-button color="primary" (click)="navigateToYes()" class="z-10" >
         Yes, I’d love to!
       </button>
       <button
         mat-raised-button
         color="accent"
-    id="noButton"
+    id="noButton" class="!min-w-[150px]"
     (click)="dodgeNoButton()"
       >
         Not tonight

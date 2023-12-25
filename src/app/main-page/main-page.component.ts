@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class MainPageComponent {
   dodgeCount = 0;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
   navigateToYes(): void {
     this.router.navigate(['/yes']);
   }
@@ -24,20 +24,23 @@ export class MainPageComponent {
     if (!noButton) return;
 
     if (this.dodgeCount < 5) {
-      // Calculate available space for movement, taking into account a safe zone
-      const safeZone = 10; // Percentage of the viewport used as a safe margin
+      const safeZone = 15;
 
-      // Generate random positions within the constraints
-      const randomX = safeZone + Math.random() * (100 - safeZone * 2);
-      const randomY = safeZone + Math.random() * (100 - safeZone * 2);
+      let randomX = safeZone + Math.random() * (100 - safeZone * 2);
+      let randomY = safeZone + Math.random() * (100 - safeZone * 2);
+      
+      if (randomX < 5) {
+        randomX = 5;
+      }
+      if (randomY < 15) {
+        randomY = 15;
+      }
 
-      // Apply the random position using the top and left properties as percentages
       noButton.style.position = 'absolute';
       noButton.style.left = `${randomX}%`;
       noButton.style.top = `${randomY}%`;
       noButton.style.transition = 'left 0.5s ease, top 0.5s ease';
     } else {
-      // After the button has dodged 5 times, navigate to the "No" page
       this.router.navigate(['/no']);
     }
   }
