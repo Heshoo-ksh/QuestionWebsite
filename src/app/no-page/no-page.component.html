@@ -1,8 +1,14 @@
 <div class="flex !flex-col justify-center items-center h-screen bg-blue-300">
-  <div class="flex !flex-col">
-    <img [src]="currentGif" alt="Flynn GIF" class="h-auto w-full md:h-full md:w-auto transition-opacity duration-1000" />
-    <p class="pt-10 text-xl text-black font-semibold text-lg md:text-xl  text-center mt-4 px-4 transition-opacity duration-1000"
-       [class]="getAnimationClass(currentGifIndex)"
-       [innerHTML]="currentMessage"></p>
+  <div class="flex !flex-col !items-center justify-center h-auto w-full md:h-auto md:w-auto ">
+    <img
+      [src]="currentGif"
+      alt="Flynn GIF"
+      class="h-auto w-full md:h-auto md:w-auto  transition-opacity duration-1000"
+    />
+    <p
+      class="pt-10  text-xl text-black max-w-[800px] w-auto font-semibold text-lg md:text-xl text-center mt-4 px-4 transition-opacity duration-1000"
+      [class]="getAnimationClass(currentGifIndex)"
+      [innerHTML]="currentMessage"
+    ></p>
   </div>
 </div>
